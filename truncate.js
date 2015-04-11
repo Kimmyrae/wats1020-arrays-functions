@@ -1,8 +1,26 @@
 // This is the file where you will write the Truncate Words function and related code.
 
-// TODO: Create a Function called truncateWords() that accepts two arguments: 
+// TODO: Create a Function called truncateWords() that accepts two arguments:
 // longText (a String with several words in it)
 // numWords (an Integer that sets the number of words you want in the returned text)
+function truncateWords(longText , numWords){
+var longTextArray = longText.split(" ");
+console.log(longTextArray);
+var size = longTextArray.length;
+    console.log(size);
+shortTextArray = longTextArray.splice(0, numWords);
+console.log(numWords);
+    console.log(shortTextArray);
+    shortTextArray.push("...");
+    console.log(shortTextArray);
+    var shortText = shortTextArray.join(" ");
+    console.log(shortText);
+    return shortText;
+}
+ 
+var truncatedText= truncateWords("A string with several words in it" , 4);
+console.log(truncatedText);
+
 
 // TODO: Within the truncateWords() Function, complete the following steps:
 // 1. Use the split() function to split the String into an Array
